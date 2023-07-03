@@ -15,7 +15,7 @@ public class AppTaskRepositories implements TaskRepositories {
 
     public AppTaskRepositories(TaskDataSource dataSource, List<Task> tasks) {
         this.dataSource = dataSource;
-        this.tasks = tasks == null ? new ArrayList<>() : tasks;
+        this.tasks = tasks;
     }
 
     @Override
@@ -26,7 +26,7 @@ public class AppTaskRepositories implements TaskRepositories {
     @Override
     public void editTask(Task task, String component, String newValue) {
         switch (component) {
-            case "b" -> task.setBody(newValue);
+            case "t" -> task.setBody(newValue);
             case "d" -> task.setDeadline(LocalDateTime.parse(newValue,
                     DateTimeFormatter.ofPattern("HH:mm dd/MM/yyyy")));
             case "st" -> task.setCompleted(task.isCompleted() == false ? true : false);
