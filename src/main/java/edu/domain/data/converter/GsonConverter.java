@@ -1,7 +1,8 @@
-package edu.domain.data;
+package edu.domain.data.converter;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import edu.domain.data.Task;
 
 import java.util.List;
 

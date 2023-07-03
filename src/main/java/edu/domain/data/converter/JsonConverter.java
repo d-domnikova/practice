@@ -1,4 +1,6 @@
-package edu.domain.data;
+package edu.domain.data.converter;
+
+import edu.domain.data.Task;
 
 import java.util.List;
 
